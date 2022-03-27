@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryGame!</title>
+
+    <link rel="stylesheet" href="stilark.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .containerM{
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        .overskrift{
+            text-align: center;
+            margin-top: 75px;
+            margin-bottom: 25px;
+            color: #66fcf1;
+        }
+        .AlleKort{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 2em;
+        }
+        .kort{
+            height: 110px;
+            width: 90px;
+            background-color: #66fcf1;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s all ease;
+
+            display: grid;
+            place-items: center;
+        }
+
+        .kort:hover{
+            transform:scale(1.03);
+        }
+
+        .kort img{
+            width: auto;
+            max-height: 110px;
+            transition:0.3s all ease ;
+            opacity: 0;
+        }
+
+        .kort.sjekket img{
+            border: 7px solid green;
+            opacity: 1;
+        }
+
+        .kort.trykket img{
+            opacity: 1;
+        }
+
+        #nyttgame{
+            width: 100px;
+            height: 25px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: #66fcf1;
+            background-color:#1f2833 ;
+            border: 1px solid white;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+        <h1 class="logo">SpillHub</h1>
+        <input type="checkbox" id="nav-tast" class="nav-tast">
+
+        <nav>
+            <ul>
+                <li><a href="main.html">Hjem</a></li>
+                <li><a href="memoryGame.html">MemoryGame</a></li>
+                <li><a href="hangman.html">HangMan</a></li>
+            </ul>
+        </nav>
+        <label for="nav-tast" class="nav-tast-label">
+            <span></span>
+        </label>
+</header>
+
+    <div class="containerM">
+        <h2 class="overskrift">Memory Game med F1 førere!</h2>
+        <div class="AlleKort">
+            <div class="kort" forer="alonso">
+                <img src="bilder/alonso.jpg" alt="Bilde av Alonso">
+            </div>
+
+            <div class="kort" forer="bottas">
+                <img src="bilder/bottas.jpg" alt="Bilde av Bottas">
+            </div>
+
+            <div class="kort" forer="gasly">
+                <img src="bilder/gasly.jpg" alt="Bilde av Gasly">
+            </div>
+
+            <div class="kort" forer="hamilton">
+                <img src="bilder/hamilton.jpg" alt="Bilde av Hamilton">
+            </div>
+
+            <div class="kort" forer="leclerc">
+                <img src="bilder/leclerc.jpg" alt="Bilde av Leclerc">
+            </div>
+
+            <div class="kort" forer="max">
+                <img src="bilder/max.jpg" alt="Bilde av Max">
+            </div>
+
+            <div class="kort" forer="norris">
+                <img src="bilder/norris.jpg" alt="Bilde av Norris">
+            </div>
+
+            <div class="kort" forer="ricciardo">
+                <img src="bilder/ricciardo.jpg" alt="Bilde av Ricciardo">
+            </div>
+
+            <div class="kort" forer="alonso">
+                <img src="bilder/alonso.jpg" alt="Bilde av Alonso">
+            </div>
+
+            <div class="kort" forer="bottas">
+                <img src="bilder/bottas.jpg" alt="Bilde av Bottas">
+            </div>
+
+            <div class="kort" forer="gasly">
+                <img src="bilder/gasly.jpg" alt="Bilde av Gasly">
+            </div>
+
+            <div class="kort" forer="hamilton">
+                <img src="bilder/hamilton.jpg" alt="Bilde av Hamilton">
+            </div>
+
+            <div class="kort" forer="leclerc">
+                <img src="bilder/leclerc.jpg" alt="Bilde av Leclerc">
+            </div>
+
+            <div class="kort" forer="max">
+                <img src="bilder/max.jpg" alt="Bilde av Max">
+            </div>
+
+            <div class="kort" forer="norris">
+                <img src="bilder/norris.jpg" alt="Bilde av Norris">
+            </div>
+
+            <div class="kort" forer="ricciardo">
+                <img src="bilder/ricciardo.jpg" alt="Bilde av Ricciardo">
+            </div>            
+
+        </div>
+        <div id="knapp">
+            <button id="nyttgame" onClick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script src="memoryGame.js"></script>
+</body>
+</html>

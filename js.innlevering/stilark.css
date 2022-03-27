@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: black;
+    color:#66fcf1 ;
+}
+
+/*style for menyen*/
+header{
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #1f2833;
+    padding-bottom: 10px;
+
+    top: 0;
+}
+
+
+nav{
+    position: absolute;
+    text-align: right;
+    top: 100%;
+    right: 0;
+    background-color: #1f2833;
+    width: 100%;
+
+    flex: 1;
+    text-align: center;
+    
+    display: none;
+}
+
+nav ul li{
+    list-style: none; 
+    display: inline-block; 
+    padding: 8px 12px;
+    position: relative;
+
+    text-decoration: none;
+    font-size:25px;   
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size:25px;
+    color: #66fcf1;
+}
+
+/*utseende før du skal trykke pålinken*/
+
+nav ul li ::after{
+    content: '';
+    width:0%;
+    height: 5px;
+    background: #45a29e;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li :hover::after{
+    width: 100%;
+    background: #45a29e;
+}
+
+/*utseende når du trykker på linken*/
+nav ul li :active::after{
+    width: 100%;
+    background: #de3131;
+    transition: none;
+}
+
+.nav-tast{
+    display:none;
+}
+.nav-tast-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    margin-top: 20px;
+
+    height: 10px;
+    display: flex;
+    align-items: center;   
+}
+
+/* hamburger meny ikon*/
+.nav-tast-label span,
+.nav-tast-label span::before,
+.nav-tast-label span::after {
+    display: block;
+    background:#66fcf1 ;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+
+}
+
+.nav-tast-label span::before,
+.nav-tast-label span::after{
+    content: ''; /* fyller inn fordi vi ikke ønsker noe content*/
+    position: absolute;
+}
+
+.nav-tast-label span::before{
+    bottom: 7px;
+}
+
+.nav-tast-label span::after{
+    top: 7px;
+}
+
+.nav-tast:checked ~ nav { /* søker etter sibling på samme "nivå" som  nav-tast*/
+    display: block;
+}
+
+.container{
+    margin-top: 75px;
+}
+
+
+/* css for kilder*/
+.bottom > div{
+    width: 100%;
+    height: auto;
+
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom{
+    border: 1px solid #1f2833;
+    background-color: #45a29e;
+
+    padding: 20px;
+}
+
+#containerK{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+#containerK > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* tekst i bunn*/
+.avsnittB{
+    color: #ffffff;
+}
+.avsnittB ul li a{
+    color: #ffffff;
+}
+
+#overskriftB{
+    color: #ffffff;
+} 

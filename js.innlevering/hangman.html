@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap 4 CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stilark.css">
+  <title>Hangman!</title>
+
+</head>
+<body>
+
+<header>
+        <h1 class="logo">SpillHub</h1>
+        <input type="checkbox" id="nav-tast" class="nav-tast">
+
+        <nav>
+            <ul>
+                <li><a href="main.html">Hjem</a></li>
+                <li><a href="memoryGame.html">MemoryGame</a></li>
+                <li><a href="hangman.html">HangMan</a></li>
+            </ul>
+        </nav>
+        <label for="nav-tast" class="nav-tast-label">
+            <span></span>
+        </label>
+</header>
+
+
+<div class="container">
+    <h1 class="text-center">HangMan!</h1>
+    <div class="float-right">Antall feil: <span id='feil'>0</span> of <span id='maxFeil'></span></div>
+    <div class="text-center">
+        <img id='hangmanPic' src="bilder/0.jpg" alt="Bilde av hangman">
+        <p>Gjett hvilket dyr: </p>
+        <p id="dyret">Dyret kommer her</p>
+        <div id="tastatur"></div>
+        <button class="btn btn-info" onClick="reset()">Reset</button>
+    </div> 
+</div>
+
+<script src='hangman.js'></script>
+</body>

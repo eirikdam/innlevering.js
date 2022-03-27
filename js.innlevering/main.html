@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpillHub</title>
+
+    <link rel="stylesheet" href="stilark.css">
+    <style>
+#hoved{
+    width: 55%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#hoved > div{
+    border: 1px solid #66fcf1;
+    margin: 15px auto;
+    padding: 20px;
+    margin-top: 75px; /*for å separere fra toppen */
+}
+#intro{
+    background-color: #1f2833;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">SpillHub</h1>
+        <input type="checkbox" id="nav-tast" class="nav-tast">
+
+        <nav>
+            <ul>
+                <li><a href="main.html">Hjem</a></li>
+                <li><a href="memoryGame.html">MemoryGame</a></li>
+                <li><a href="hangman.html">HangMan</a></li>
+            </ul>
+        </nav>
+        <label for="nav-tast" class="nav-tast-label">
+            <span></span>
+        </label>
+    </header>
+
+    <div id="hoved">
+        <div id="intro">
+            <p>Velkommen til SpillHub. Dette er en nettside som har spill for å få tiden til å gå fortere. Kjeder du deg har du kommet til rett sted. Nettsiden er også en del av en innlevering i IT-faget på videregående skole.</p>
+        </div>
+    
+
+
+        <div class="spill" id="MemoryG">
+            <a href="memoryGame.html"> <img src="bilder/memoryGame.png" alt="Bilde av MemoryGame"></a>
+        </div>
+
+        <div class="spill" id="HangMan">
+            <a href="hangman.html"> <img src="bilder/HangManFor.png" alt="Bilde av HangMan"></a>
+        </div>
+
+            
+
+    </div>
+
+
+    <div class="bottom">
+
+        <div id="overskriftB">
+            <h2>Kilder</h2>
+        </div> 
+        
+        
+        <div id="containerK">
+            <div id="inspirasjon">
+                <h4>Inspirasjon</h4>
+                
+                <div class="avsnittB">
+    
+                <ul>
+    
+                    <li><a href="https://www.youtube.com/watch?v=B6aJpbX_IZU" target="_blank"> Code Grind </a></li>
+    
+                    <li>   <a href="https://www.youtube.com/watch?v=dgvyE1sJS3Y&t=2s"target="_blank"> Simon Suh </a></li>
+                </ul>
+    
+                </div>
+                
+            </div>
+    
+            <div id="verktøy">
+                <h4>Verktøy</h4>
+    
+                <div class="avsnittB">
+    
+                <ul>
+                <li><a href="https://www.w3schools.com/" target="_blank">w3schools</a></li>
+
+                <li> <a href="https://color.adobe.com/nb/create/color-wheel" target="_blank">Adobe color-wheel</a></li>
+
+                <li><a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">w3schools color-picker</a></li>
+
+                <li><a href="https://aunivers.lokus.no/fagpakker/realfag/informasjonsteknologi-1-2/it-1" target="_blank">Aschehug Univers: IT 1-2</a></li>
+                </ul>
+    
+                </div>
+            </div>
+    
+    
+        </div>
+    </div>
+    
+    
+</body>
+</html>
